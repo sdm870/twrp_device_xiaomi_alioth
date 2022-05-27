@@ -1,0 +1,9 @@
+service set-device-props /system/bin/set-device-props.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+on boot
+    start set-device-props
