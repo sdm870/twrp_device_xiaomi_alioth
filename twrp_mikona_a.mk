@@ -29,16 +29,19 @@ COMMON_SOC := sm8250
 #
 #
 # Release name (automatically taken from this file's suffix)
-PRODUCT_RELEASE_NAME := $(lastword $(subst /, ,$(lastword $(subst _, ,$(firstword $(subst ., ,$(MAKEFILE_LIST)))))))
+#PRODUCT_RELEASE_NAME := $(lastword $(subst /, ,$(lastword $(subst _, ,$(firstword $(subst ., ,$(MAKEFILE_LIST)))))))
+PRODUCT_RELEASE_NAME := mikona_a
 
 # Custom vendor used in build tree (automatically taken from this file's prefix)
-CUSTOM_VENDOR := $(lastword $(subst /, ,$(firstword $(subst _, ,$(firstword $(MAKEFILE_LIST))))))
+#CUSTOM_VENDOR := $(lastword $(subst /, ,$(firstword $(subst _, ,$(firstword $(MAKEFILE_LIST))))))
+CUSTOM_VENDOR := twrp
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/$(CUSTOM_VENDOR)/config/common.mk)
 
 # OEM Info (automatically taken from device tree path)
-BOARD_VENDOR := $(or $(word 2,$(subst /, ,$(firstword $(MAKEFILE_LIST)))),$(value 2))
+#BOARD_VENDOR := $(or $(word 2,$(subst /, ,$(firstword $(MAKEFILE_LIST)))),$(value 2))
+BOARD_VENDOR := xiaomi
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
