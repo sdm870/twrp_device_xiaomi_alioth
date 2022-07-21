@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=mikona_a
+DEVICE=alioth
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks

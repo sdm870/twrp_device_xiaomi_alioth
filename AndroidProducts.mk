@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_mikona_a.mk
+    $(LOCAL_DIR)/twrp_alioth.mk

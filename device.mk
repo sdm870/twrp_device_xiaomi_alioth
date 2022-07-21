@@ -28,7 +28,7 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/recovery-device/root/,$(TARGET_COPY_OUT_RECOVERY)/root/)
 
 # Vendor blobs
-ifneq ($(wildcard vendor/xiaomi/mikona_a/proprietary/),)
+ifneq ($(wildcard vendor/xiaomi/alioth/proprietary/),)
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/xiaomi/mikona_a/proprietary/,$(TARGET_COPY_OUT_RECOVERY)/root/)
+    $(call find-copy-subdir-files,*,vendor/xiaomi/alioth/proprietary/,$(TARGET_COPY_OUT_RECOVERY)/root/)
 endif

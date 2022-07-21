@@ -30,7 +30,7 @@ COMMON_SOC := sm8250
 #
 # Release name (automatically taken from this file's suffix)
 #PRODUCT_RELEASE_NAME := $(lastword $(subst /, ,$(lastword $(subst _, ,$(firstword $(subst ., ,$(MAKEFILE_LIST)))))))
-PRODUCT_RELEASE_NAME := mikona_a
+PRODUCT_RELEASE_NAME := alioth
 
 # Custom vendor used in build tree (automatically taken from this file's prefix)
 #CUSTOM_VENDOR := $(lastword $(subst /, ,$(firstword $(subst _, ,$(firstword $(MAKEFILE_LIST))))))
