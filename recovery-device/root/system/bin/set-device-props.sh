@@ -16,26 +16,18 @@ set_device_model() {
 	done
 }
 
-case "$(cat /sys/firmware/devicetree/base/model)" in
-	"Qualcomm Technologies, Inc. xiaomi apollo")
-		set_device_codename "apollo"
-		set_device_model "Redmi K30S Ultra / Mi 10T / Mi 10T Pro"
+case "$(getprop ro.boot.hwc)" in
+	"INDIA")
+		set_device_codename "aliothin"
+		set_device_model "Mi 11X"
 		;;
-	"Qualcomm Technologies, Inc. xiaomi cas")
-		set_device_codename "cas"
-		set_device_model "Mi 10 Ultra"
+	"GLOBAL")
+		set_device_codename "alioth"
+		set_device_model "POCO F3"
 		;;
-	"Qualcomm Technologies, Inc. xiaomi cmi")
-		set_device_codename "cmi"
-		set_device_model "Mi 10 Pro"
-		;;
-	"Qualcomm Technologies, Inc. xiaomi lmi")
-		set_device_codename "lmi"
-		set_device_model "POCO F2 Pro / Redmi K30 Pro"
-		;;
-	"Qualcomm Technologies, Inc. xiaomi umi")
-		set_device_codename "umi"
-		set_device_model "Mi 10"
+	"")
+		set_device_codename "alioth"
+		set_device_model "Redmi K40"
 		;;
 esac
 
