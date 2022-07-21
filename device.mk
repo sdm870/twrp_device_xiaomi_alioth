@@ -20,6 +20,9 @@
 # product configuration (apps).
 #
 
+# A/B
+TARGET_IS_VAB := true
+
 # Inherit from OEM SOC-common
 $(call inherit-product, $(COMMON_PATH)/common.mk)
 
