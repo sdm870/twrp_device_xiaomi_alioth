@@ -34,8 +34,8 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
 
 # Recovery
-TW_Y_OFFSET := 90
-TW_H_OFFSET := -90
+TW_Y_OFFSET := 75
+TW_H_OFFSET := -75
 
 #
 # For local builds only
