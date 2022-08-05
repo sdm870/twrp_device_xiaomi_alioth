@@ -26,10 +26,6 @@ TARGET_IS_VAB := true
 # Inherit from OEM SOC-common
 $(call inherit-product, $(COMMON_PATH)/common.mk)
 
-# Recovery
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/recovery-device/root/,$(TARGET_COPY_OUT_RECOVERY)/root/)
-
 # Vendor blobs
 ifneq ($(wildcard vendor/xiaomi/alioth/proprietary/),)
 PRODUCT_COPY_FILES += \
