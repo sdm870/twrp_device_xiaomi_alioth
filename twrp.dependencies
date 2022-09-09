@@ -2,5 +2,9 @@
   {
     "repository": "android_device_xiaomi_sm8250-common",
     "target_path": "device/xiaomi/sm8250-common"
+  },
+  {
+    "repository": "proprietary_vendor_xiaomi_alioth",
+    "target_path": "vendor/xiaomi/alioth"
   }
 ]
