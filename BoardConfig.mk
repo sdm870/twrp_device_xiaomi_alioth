@@ -19,6 +19,8 @@
 # product configuration (apps).
 #
 
+TARGET_IS_VAB := true
+
 # Prebuilts
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 
@@ -26,12 +28,15 @@ TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 -include $(COMMON_PATH)/BoardConfigCommon.mk
 
 # Bootloader
-BOARD_USES_RECOVERY_AS_BOOT := true
+BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
+BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 TARGET_NO_RECOVERY := true
 
 # Prebuilts
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
+
+BOARD_BOOT_HEADER_VERSION = 4
 
 # Recovery
 TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)
